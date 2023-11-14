@@ -14,7 +14,7 @@ function converge(a, b)
     return lim
 end
 t0=time()
-prec=10000
+prec=11000
 rea=LinRange(-2, 2, prec)
 ima=LinRange(-2, 2, prec)
 C=[converge(r, i) for r in rea, i in ima]

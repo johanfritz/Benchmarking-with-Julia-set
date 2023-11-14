@@ -24,4 +24,3 @@ print(f"total time (s): {(t1-t0)*1e-9:.4f}")
 print(f"time per element (ns): {(t1-t0)/elements}")
 plt.imshow(J)
 plt.show()
-# time varies per element but seems to in the range of 15000-20000 ns

@@ -19,7 +19,7 @@ int main()
     double c_real = -0.4; // constant c in generating Julia set
     double c_imag = 0.6;
 
-    float precision = 1500; // arbitrary scaling factor (impacts resolution)
+    float precision = 2200; // arbitrary scaling factor (impacts resolution)
 
     float deltareal = realmax - realmin;
     float deltaimag = imagmax - imagmin;
@@ -41,6 +41,7 @@ int main()
     float timeper = ns.count() / elements;
     std::cout << ns.count()/pow(10, 9) << " total render time (seconds)" << std::endl;
     std::cout << timeper << " render time per pixel (nanoseconds)" << std::endl;
+    std::cout << elements << " elements";
     //saveToCSV(matrix, "matrix.csv");
     std::string script = "python plotcsv.py";
     //system(script.c_str()); 

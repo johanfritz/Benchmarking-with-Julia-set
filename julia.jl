@@ -14,7 +14,7 @@ function converge(a, b)
     return lim
 end
 t0=time()
-prec=11000
+prec=8000
 rea=LinRange(-2, 2, prec)
 ima=LinRange(-2, 2, prec)
 C=[converge(r, i) for r in rea, i in ima]
@@ -23,4 +23,4 @@ elements=size(C)[1]*size(C)[2]
 println("elements: ", elements)
 println("total time (s): ", t1-t0)
 println("time per element (ns): ", 1e9*(t1-t0)/(prec*prec))
-heatmap(C)
+#heatmap(C)
